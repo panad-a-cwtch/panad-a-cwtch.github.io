@@ -1,0 +1,311 @@
+body, html {
+    height: 100%;
+    margin:0;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    overflow: auto;
+}
+
+.logo {
+    float: left;
+    padding-left: 20px;
+}
+
+header {
+    background-color: white;
+    overflow: auto;
+    height: 2.8em;
+    line-height: 2.8em;
+    font-size: 1.1em;
+}
+
+/* Ensures whole box for li's can be clicked and not just text - makes it easier for mobile and smaller screens */
+header a {
+    display: block;
+}
+
+nav {
+    float: right;
+}
+
+nav li {
+    float: left;
+    list-style-type: none;
+    padding: 0 10px 0px 10px;
+}
+
+nav li:last-of-type {
+    padding-right: 20px;
+}
+
+nav li a:hover, .logo:hover{
+    color: rgb(224, 37, 215);
+}
+
+.cat-image1, .cat-image2, .cat-image3, .cat-image4 {
+    background-image: url("../img/cat-care.jpg");
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.cat-image2 {
+    background-image: url("../img/cat3.jpg");
+}
+
+.cat-image3 {
+    background-image: url("../img/cat4.jpg");
+    margin-bottom: 2em;
+}
+
+.cat-image4 {
+    background-image: url("../img/cat2.jpg");
+    margin-bottom: 2em;
+}
+
+.cat-text1, .cat-text2, .cat-text3, .cat-text4 {
+    text-align: center;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cat-text2 {
+    color:white;
+}
+
+.bold {
+    font-weight: bolder;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul {
+    padding: 0%;
+    margin: 0%;
+}
+
+footer {
+    height: 2.8em;
+    font-style: italic;
+    border-top: solid black 1px;
+    line-height: 2.8em;
+}
+
+footer p {
+    margin: 0;
+}
+
+a {
+    color: black;
+}
+
+.thumbnail {
+    width: 100%;
+    border-radius: 1em;
+}
+
+.images a {
+    display: inline-block;
+    height: 10%;
+    width:15%;
+    margin: 1em 4em 4em 4em;
+    padding:2em;
+    border: 1px solid #ddd;
+    border-radius: 1em;
+    text-decoration: none;
+}
+
+.images a:hover {
+    box-shadow: gray 0px 1px 10px 2px;
+}
+
+iframe {
+    width: 49%;
+    height: 800px;
+    border: solid black 1px;
+}
+
+.gallery-img {
+    height:550px;
+    width: 800px;
+}
+
+.gallery-container {
+    position: relative;
+    width: 800px;
+    /*Height is slightly bigger than the height of the images so that the buttons are shown*/
+    height: 580px; 
+    overflow: hidden;
+    margin-bottom: 2em;
+
+    /*Centers the gallery*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery {
+    height:550px;
+    width: 4800px;
+    transition: margin .5s ease-in-out;
+}
+
+button {
+    width: 10%;
+    text-align: center;
+}
+
+button:last-of-type {
+    float: right;
+}
+
+button:first-of-type {
+    float: left;
+}
+  
+.hidden {
+    display: none;
+}
+
+main article {
+    float: left; 
+    margin-left: 6em;
+    width:38%;
+}
+
+main aside {
+    float: right;
+    margin-right: 6em;
+    width: 45%;
+}
+
+main {
+    overflow: auto;
+}
+
+.FAQ h1 {
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+.FAQ {
+    text-align: left;
+}
+
+@media only screen and (max-width: 767px) {
+    nav li {
+        width: 100%;
+        border-bottom: solid black 1px;
+        padding: 0%;
+    }
+
+    nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav li:last-of-type {
+        padding-right: 0;
+    }
+
+    .logo{
+        width: 100%;
+        text-align: center;
+        display: block;
+        border-bottom: solid black 1px;
+        padding: 0%;
+    }
+
+     /*Shows the whole overflow from the navigation bar instead of needing a scrollbar*/
+    header {
+        overflow: visible;
+    }
+
+    /*Allows navigation bar to be seen and not blocked by image*/
+    .cat-image1, .cat-image2, .cat-image3, .cat-image4 {
+        clear: both;
+    }
+
+    .thumbnail {
+        margin:0;
+        padding: 2em;
+        width: 60%;
+    }
+
+    .images a {
+        padding: 0;
+        margin: auto;
+        width:50%;
+        border: none;
+    }
+
+}
+
+@media only screen and (min-width: 760px) and (max-width: 1224px) {
+    .thumbnail {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .images a {
+        width:30%;
+        margin-bottom: 1em;
+        padding: 0%;
+    }
+
+}
+
+@media only screen and (min-width: 506px) and (max-width: 760px) {
+    .thumbnail {
+        margin: 0;
+        padding: 0;
+        width: 90%;
+    }
+
+    .images a {
+        width:30%;
+        margin-bottom: 1em;
+        padding: 0%;
+    }
+}
+
+@media only screen and (max-width: 799px) {
+    .gallery-container {
+        display: none;
+    }
+
+    /*Makes sure the footer is at the bottom of the screen when the content section is short of missing - like when screen is too small to view the gallery*/
+    .gallery-footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1290px) {
+    main article {
+        float: none;
+        width: 100%;
+        padding-left: 1em;
+        margin: 0;
+    }
+
+    main aside {
+        float: none;
+        width: 100%;
+        padding-left: 1em;
+    }
+    
+    iframe {
+        width:80%;
+    }
+
+}
