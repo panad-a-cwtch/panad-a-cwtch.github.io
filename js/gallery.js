@@ -7,7 +7,7 @@ var next = document.getElementById('next');
 
 
 //Gets the data from my JSON file and for each one creates an element with the image url and adds a classname to them. 
-$.getJSON("https://raw.githubusercontent.com/MonkBebs/MonkBebs.github.io/master/js/gallery.json", function (data) {
+$.getJSON("https://raw.githubusercontent.com/panad-a-cwtch/panad-a-cwtch.github.io/master/js/gallery.json", function (data) {
     $.each(data, function (i, d) {
 
         var image = document.createElement('img');
