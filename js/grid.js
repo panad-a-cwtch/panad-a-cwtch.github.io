@@ -1,6 +1,6 @@
 
 //This gets the JSON data from my JSON file
-$.getJSON("https://raw.githubusercontent.com/panad-a-cwtch/panad-a-cwtch.github.io/master/js/grid.json", function (data) {
+$.getJSON("https://raw.githubusercontent.com/panad-a-cwtch.github.io/master/js/grid.json", function (data) {
     $.each(data, function (i, d) {
 
         //For each JSON object - It gets added to my images div, 
